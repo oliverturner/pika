@@ -1,0 +1,58 @@
+.bg {
+  display: grid;
+  grid-template-areas:
+    "a a b b b b"
+    "a a c c c c"
+    "a a d d d d";
+
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  transform: rotate(-45deg) scale(1.9);
+  transform-origin: center center;
+}
+
+.bg__stripes {
+  --rows: 1;
+  --cols: 1;
+  --gap: 1fr;
+
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  gap: calc(100% / var(--gap) / 2);
+}
+
+.bg__stripes--a {
+  --cols: 8;
+  --gap: var(--cols);
+
+  grid-area: a;
+}
+
+.bg__stripes--b {
+  --rows: 2;
+  --gap: var(--rows);
+
+  grid-area: b;
+}
+
+.bg__stripes--c {
+  --rows: 16;
+  --gap: var(--rows);
+
+  grid-area: c;
+}
+
+.bg__stripes--d {
+  --cols: 4;
+  --gap: var(--cols);
+
+  grid-area: d;
+}
+
+.bg__stripe {
+  background: var(--stripe);
+}
+      

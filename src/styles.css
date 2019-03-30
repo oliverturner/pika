@@ -1,0 +1,59 @@
+:root {
+  --bloo: 	#B36305;
+  --cent: 	#E32017;
+  --circ: 	#FFD300;
+  --dist: 	#00782A;
+  --dlr: 	  #00A4A7;
+  --hsmith: #F3A9BB;
+  --jubi: 	#A0A5A9;
+  --metro: 	#9B0056;
+  --nthrn: 	#000000;
+  --overg:  #EE7C0E;
+  --picc: 	#003688;
+  --tram: 	#84B817;
+  --vict: 	#0098D4;
+  --wloo: 	#95CDBA;
+
+  --grad1: #002239;
+  --grad2: #0B605F;
+  --stripe: #fff1;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  --grad-img: linear-gradient(119deg, var(--grad1) 2%, var(--grad2) 82%);
+  
+  overflow: hidden;
+  font-family: sans-serif;
+  background: var(--grad2) var(--grad-img) no-repeat;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+}
+
+.app__header {
+  background: #fff;
+  /*box-shadow: 0 5px 5px #0006;*/
+
+  backdrop-filter: blur(5px) contrast(.8);
+}
+
+.app__title {
+  margin: 0;
+  font-weight: 100;
+}
+
+.app__footer {
+  background: #fff;
+  box-shadow: 0 -5px 5px #0006;
+}

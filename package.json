@@ -1,0 +1,14 @@
+{
+  "name": "supermannerism",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@pika/web": "0.4.1",
+    "serve": "10.1.2"
+  },
+  "scripts": {
+    "prepare": "pika-web",
+    "dev": "serve"
+  }
+}
