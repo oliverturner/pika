@@ -1,4 +1,13 @@
-.bg {
+.sm {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sm__container {
   display: grid;
   grid-template-areas:
     "a a b b b b"
@@ -9,11 +18,13 @@
   height: 100vh;
 
   position: absolute;
-  transform: rotate(-45deg) scale(1.9);
-  transform-origin: center center;
+  -webkit-transform: rotate(-45deg) scale(1.9);
+          transform: rotate(-45deg) scale(1.9);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
-.bg__stripes {
+.sm__stripes {
   --rows: 1;
   --cols: 1;
   --gap: 1fr;
@@ -21,38 +32,38 @@
   display: grid;
   grid-template-columns: repeat(var(--cols), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
+  grid-gap: calc(100% / var(--gap) / 2);
   gap: calc(100% / var(--gap) / 2);
 }
 
-.bg__stripes--a {
+.sm__stripes i {
+  background: var(--stripe);
+}
+
+.sm__stripes--a {
   --cols: 8;
   --gap: var(--cols);
 
   grid-area: a;
 }
 
-.bg__stripes--b {
+.sm__stripes--b {
   --rows: 2;
   --gap: var(--rows);
 
   grid-area: b;
 }
 
-.bg__stripes--c {
+.sm__stripes--c {
   --rows: 16;
   --gap: var(--rows);
 
   grid-area: c;
 }
 
-.bg__stripes--d {
+.sm__stripes--d {
   --cols: 4;
   --gap: var(--cols);
 
   grid-area: d;
 }
-
-.bg__stripe {
-  background: var(--stripe);
-}
-      
